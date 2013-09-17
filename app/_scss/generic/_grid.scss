@@ -1,0 +1,47 @@
+// https://github.com/csswizardry/csswizardry-grids/blob/master/csswizardry-grids.scss
+%grid {
+  list-style: none;                /* [1] */
+  margin: 0;                       /* [2] */
+  padding: 0;                      /* [2] */
+  margin-left: 0;                  /* [3] */
+  letter-spacing: -0.31em;         /* [4] */
+}
+
+/* Opera hack */
+.opera:-o-prefocus, %grid {
+  word-spacing: -0.43em;
+}
+
+%grid-item {
+  @include inline-block;
+  @include box-sizing(border-box);
+  padding-left: 0;                 /* [2] */
+  vertical-align: top;             /* [3] */
+  letter-spacing: normal;          /* [4] */
+  word-spacing: normal;            /* [4] */
+}
+
+// For when a %grid is also a %grid-item
+%grid-item-grid {
+  letter-spacing: -0.31em;
+}
+
+/*
+ * Create non-floating lists,
+ * able to be left/center/right aligned
+ * without needing to remove line breaks in markup.
+ *
+ * https://github.com/csswizardry/csswizardry-grids/blob/master/csswizardry-grids.scss
+ */
+%inline-list {
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  
+  > * {
+    @include inline-block;
+    @include box-sizing(border-box);
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+  }
+}

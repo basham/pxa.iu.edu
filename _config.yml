@@ -7,12 +7,11 @@
 
 name: pxa.iu.edu
 description: Process Experience Architecture, UITS, Indiana University
+keywords: IU, Indiana University
+title: PXA
 
-author:
-  name: Chris Basham
-  email: csbasham@indiana.edu
-  github: basham
-  twitter: chrisbasham
+# Ignore prefixing the title of this page to the browser title
+ignore_page_title: Home
 
 # Exclude directories and/or files from the conversion.
 # Grunt moves image files and asset directories.
@@ -45,3 +44,6 @@ markdown: redcarpet
 
 # Use Pygments to highlight code blocks
 pygments: true
+
+# Relative permalinks depreciated in Kekyll v1.1.0
+relative_permalinks: false

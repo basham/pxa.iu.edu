@@ -1,0 +1,8 @@
+p {
+  @include adjust-font-size-to($r);
+  color: #444;
+}
+
+p + p {
+  @include rhythm(1, 0, 0, 0, $r);
+}

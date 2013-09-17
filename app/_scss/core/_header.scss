@@ -1,0 +1,119 @@
+$ns: 'Header';
+
+.#{$ns} {
+
+  svg {
+    position: absolute; 
+    height: $h;
+    left: 0;
+    top: 0;
+    width: $w;
+  }
+  
+  > hgroup {
+    background-color: #222;
+    box-sizing: border-box;
+    color: #FFF;
+    min-height: $h / 5 * 3;
+    padding: ($h / 5 + 3) 0 0 $w;
+  }
+  
+  h1 {
+    @include adjust-font-size-to($l);
+    font-weight: 400;
+    line-height: 1;
+    padding-bottom: 12px;
+    margin: 0;
+  }
+  
+  h2 {
+    @include adjust-font-size-to($s);
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    
+    > a {
+      color: $lightgray;
+    }
+  }
+}
+
+.#{$ns}-nav- {
+  @extend %grid;
+  //box-shadow: 0 -1px #000, 0 1px #000;
+  //background-color: $crimson;
+  margin-left: $w;
+  width: $base-line-width;
+  border-bottom: 1px solid $lightgray;
+
+  > a {
+    @extend %grid-item;
+    @include adjust-font-size-to($r, 2);
+    //box-shadow: inset 0 0 0 1px lighten($crimson, 5%);
+    //border-right: 1px solid #000;
+    //color: #FFF;
+    color: #666;
+    display: inline-block;
+    line-height: 2.5;
+    padding: 0 0.75em;
+    text-decoration: none;
+    
+    &:first-child {
+      //border-left: 1px solid #000;
+    }
+
+    &:hover {
+      //background-color: lighten($crimson, 5%);
+      text-decoration: none;
+    }
+    
+    &:active {
+      //background-color: lighten($crimson, 10%);
+    }
+    
+    &.is-active {
+      box-shadow: 0 1px $crimson;
+      //background-color: darken($crimson, 5%);
+      color: $crimson;
+    }
+  }
+}
+
+.#{$ns}-nav {
+  @extend %grid;
+  box-shadow: 0 -1px #000, 0 1px #000;
+  background-color: $crimson;
+  padding-left: $w;
+
+  > a {
+    @extend %grid-item;
+    @include adjust-font-size-to($r, 2);
+    box-shadow: inset 0 0 0 1px lighten($crimson, 5%);
+    border-right: 1px solid #000;
+    color: #FFF;
+    display: inline-block;
+    line-height: $h / 5 + $scale * 2;
+    padding: 0 1em;
+    text-decoration: none;
+    
+    &:first-child {
+      border-left: 1px solid #000;
+    }
+
+    &:hover {
+      background-color: lighten($crimson, 5%);
+      text-decoration: none;
+    }
+    
+    &:active {
+      background-color: lighten($crimson, 10%);
+    }
+    
+    &.is-active {
+      box-shadow: none;
+      background-color: darken($crimson, 5%);
+    }
+  }
+}

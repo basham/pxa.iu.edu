@@ -1,0 +1,26 @@
+h1, h2, h3 {
+  @extend %sans-serif;
+}
+
+h1 {
+  @include adjust-font-size-to($xl);
+  @include rhythm(1, 0, 0, 0, $xl);
+  font-weight: normal;
+}
+
+h2 {
+  @include adjust-font-size-to($l);
+  @include rhythm(1, 0, 0, 0, $l);
+  font-weight: bold;
+}
+
+h3 {
+  @include adjust-font-size-to($m);
+  @include rhythm(1, 0, 0, 0, $m);
+  font-weight: bold;
+}
+
+h2 + h3 {
+  font-weight: normal;
+  margin-top: 0;
+}

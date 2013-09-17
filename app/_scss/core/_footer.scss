@@ -1,0 +1,23 @@
+$ns: 'Footer';
+
+.#{$ns} {
+  border-top: 1px solid $border-color;
+  margin-top: rhythm(2, $r);
+  position: relative;
+  
+  > a {
+    display: block;
+    left: $w - $width;
+    position: absolute;
+  }
+  
+  svg {
+    display: block;
+  }
+  
+  p {
+    @include adjust-font-size-to($s);
+    line-height: $height;
+    margin-left: $w;
+  }
+}

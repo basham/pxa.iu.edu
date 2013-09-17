@@ -1,0 +1,440 @@
+@import 'main';
+@import 'helpers';
+@import 'mediaqueries';
+@import 'compass/reset';
+@import 'compass/typography/vertical_rhythm';
+
+
+/*
+ * Font scales
+ */
+
+$base-font-size: 16px;
+
+$golden: 1.61803398875; // Golden ratio
+$scale: sqrt($golden);
+
+$s: $base-font-size / $scale; // Small
+$r: $s * $scale; // Regular
+$m: $r * $scale; // Medium
+$l: $m * $scale; // Large
+$xl: $l * $scale; // Extra Large
+$xxl: $xl * $scale; // Extra Extra Large
+
+
+/*
+ * Vertical rhythm
+ */
+
+$base-line-height: round($base-font-size * $golden);
+$grid-background-baseline-color: lighten(blue, 40%); 
+$grid-background-baseline-height: $base-line-height;
+
+$show-baseline-grid-backgrounds: false;
+
+@include establish-baseline;
+
+
+/*
+ * Horizontal rhythm
+ * http://www.pearsonified.com/2012/01/characters-per-line.php
+ * http://www.pearsonified.com/2011/12/golden-ratio-typography.php
+ * http://www.pearsonified.com/typography/
+ */
+
+$cpl: 75; // Characters per line
+$mu: 2.26; // Helvetica Neue character constant
+
+$line-width: $cpl * $base-font-size / $mu; // pixels
+$horizontal-lines: ceil($line-width / $base-line-height);
+$base-line-width: rhythm($horizontal-lines, $base-font-size);
+
+
+/*
+ * Block IU
+ */
+ 
+$scale: 3;
+$width: 50px;
+$height: 60px;
+$w: $width * $scale;
+$h: $height * $scale;
+
+
+/*
+ * Block formatting
+ */
+
+html {
+  @include baseline-grid-background;
+  color: #222;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+body {
+  @include adjust-font-size-to($r);
+}
+
+h1 {
+  @include adjust-font-size-to($l);
+  @include rhythm(2, 0, 0, 0, $l);
+  font-weight: 200;
+}
+
+h2 {
+  @include adjust-font-size-to($m);
+  @include rhythm(1, 0, 0, 0, $m);
+  font-weight: bold;
+}
+
+h3 {
+  @include adjust-font-size-to($r);
+  font-style: italic;
+}
+
+p, ul {
+  color: #444;
+}
+
+p {
+  @include adjust-font-size-to($r);
+}
+
+p + p {
+  @include rhythm(1, 0, 0, 0, $r);
+}
+
+ul {
+  list-style-type: inherit;
+}
+
+li {
+  margin: 0 0 0 rhythm(1, $r);
+}
+
+section > object {
+  margin: rhythm(2, $r) 0 0 0;
+  max-height: 600px;
+  width: 100%;
+}
+
+
+/*
+ * Inline formatting
+ */
+ 
+a {
+  color: $crimson;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+sup {
+  font-size: smaller;
+}
+
+
+/*
+ * Sections
+ */
+
+header {
+  @include text-shadow-dark;
+  position: relative;
+  
+  svg {
+    position: absolute; 
+    height: $h;
+    left: 0;
+    top: 0;
+    width: $w;
+  }
+  
+  hgroup {
+    @include box-sizing(border-box);
+    background-color: #222;
+    color: #FFF;
+    min-height: $h / 5 * 3;
+    padding: ($h / 5 + 3) 0 0 $w;
+  }
+  
+  h1 {
+    @include adjust-font-size-to($l);
+    line-height: 1;
+    padding-bottom: 12px;
+    margin: 0;
+  }
+  
+  h2 {
+    @include adjust-font-size-to($s);
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+    
+    a {
+      color: $lightgray;
+      text-decoration: underline;
+    }
+  }
+  
+  nav {
+    @extend .clearfix;
+    @include box-shadow(#000 0 -1px, #000 0 1px);
+    background-color: $crimson;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0 0 0 $w;
+    width: $base-line-width;
+  }
+  
+  li {
+    float: left;
+    margin: 0;
+    
+    &:first-child a {
+      border-left: 1px solid #000;
+    }
+    
+    a {
+      @include adjust-font-size-to($r, 2);
+      @include box-shadow(lighten($crimson, 5%) 0 0 0 1px inset);
+      border-right: 1px solid #000;
+      color: #FFF;
+      display: block;
+      line-height: $h / 5 + $scale * 2;
+      padding: 0 1em;
+      
+      &:hover {
+        background-color: lighten($crimson, 5%);
+        text-decoration: none;
+      }
+      
+      &:active {
+        background-color: lighten($crimson, 10%);
+      }
+      
+      &.active {
+        @include box-shadow(none);
+        background-color: darken($crimson, 5%);
+      }
+    }
+  }
+}
+    
+section > * {
+  margin-left: $w;
+}
+
+section {
+
+  p, ul {
+    width: $base-line-width;
+  }
+  
+  figure {
+    margin: rhythm(1, $r) 0 0 0;
+  }
+}
+
+footer {
+  border-top: 1px solid $lightgray;
+  margin-top: rhythm(2, $r);
+  position: relative;
+  
+  > a {
+    display: block;
+    left: $w - $width;
+    position: absolute;
+  }
+  
+  svg {
+    display: block;
+  }
+  
+  p {
+    @include adjust-font-size-to($s);
+    line-height: $height;
+    margin-left: $w;
+  }
+}
+
+.contact {
+  
+  ul {
+    list-style-type: none;
+    margin-top: rhythm(0.5, $r);
+  }
+  
+  li {
+    @include inline-block;
+    margin: 0 rhythm(0.5, $r) 0 0;
+    
+    a {
+      @include adjust-font-size-to($r, 2);
+      @include border-radius;
+      @include text-shadow;
+      display: block;
+      padding: 0 rhythm(0.5, $r);
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    
+    .email a {
+      background-color: $cream;
+      color: darken($cream, 50%);
+      
+      &:hover {
+        background-color: darken($cream, 5%);
+      }
+    }
+    
+    .tel a {
+      background-color: lighten($violet, 40%);
+      color: $violet;
+      
+      &:hover {
+        background-color: lighten($violet, 35%);
+      }
+    }
+    
+    .twitter a {
+      $color: #00ACED;
+      background-color: lighten($color, 45%);
+      color: $color;
+      
+      &:before {
+        content: '@';
+        color: lighten($color, 20%);
+      }
+      
+      &:hover {
+        background-color: lighten($color, 40%);
+      }
+    }
+    
+    .map a {
+      $color: darken(#78c14d, 5%);
+      background-color: lighten($color, 38%);
+      color: $color;
+      
+      &:hover {
+        background-color: lighten($color, 32%);
+      }
+    }
+  }
+}
+
+figure {
+  position: relative;
+}
+
+@mixin map-label($color, $use-triangle: false) {
+  $dark-color: darken($color, 30%);
+  
+  span {
+    $arrow-size: 1.625/2;
+    $arrow-size-em: #{$arrow-size}em;
+    background-color: rgba($dark-color, 0.85);
+    color: $color;
+    
+    @if $use-triangle {
+      margin-top: $arrow-size-em;
+      position: relative;
+      
+      &:before {
+        @include triangle(up, rgba($dark-color, 0.85), $arrow-size-em, $arrow-size-em);
+        margin-left: #{-1 * $arrow-size}em;
+        left: 50%;
+        top: #{-1 * $arrow-size}em;
+      }
+    }
+  }
+  
+  b {
+    background-color: $color;
+    color: $dark-color;
+  }
+}
+
+figure p {
+  @include adjust-font-size-to($r);
+  @include inline-block;
+  @include text-shadow-dark;
+  margin-top: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: auto;
+  
+  span {
+    @include border-radius;
+    @include box-shadow(rgba(#FFF, 0.5) 0 1px);
+    @include inline-block;
+    margin-left: -50%;
+    margin-top: #{-1 * (1.625 + 0.5)}em;
+    padding: 0.25em 0.5em;
+  }
+  
+  b {
+    @include box-shadow(rgba(#000, 0.25) 0 1px);
+    @include inline-block;
+    @include text-shadow;
+    font-weight: bold;
+    margin-right: 0.25em;
+    text-align: center;
+    vertical-align: baseline;
+    width: 1.625em;
+  }
+  
+  &.visitor span, &.permit span {
+    padding-left: 0.25em;
+  }
+  
+  &.visitor {
+    @include map-label(#A1CB98, true);
+  }
+  
+  &.permit {
+    @include map-label(#CCCCB8);
+  }
+  
+  &.building {
+    @include map-label(#B3B3C3);
+  }
+
+  &.road {
+    @include map-label(#FFF);
+  }
+}
+
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: lighten($crimson, 60%); // #b3d4fc
+    text-shadow: none;
+}
+
+::selection {
+    background: lighten($crimson, 60%);
+    text-shadow: none;
+}

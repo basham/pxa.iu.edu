@@ -1,0 +1,60 @@
+$ns: 'Contact';
+
+.#{$ns}-method {
+  @include border-radius;
+  @include text-shadow;
+  display: inline-block;
+  line-height: 2;
+  padding: 0 rhythm(0.5, $r);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  & + .#{$ns}-method {
+    margin-left: 0.5em;
+  }
+}
+
+.#{$ns}-method--email {
+  background-color: $cream;
+  color: darken($cream, 50%);
+  
+  &:hover {
+    background-color: darken($cream, 5%);
+  }
+}
+
+.#{$ns}-method--tel {
+  background-color: lighten($violet, 40%);
+  color: $violet;
+  
+  &:hover {
+    background-color: lighten($violet, 35%);
+  }
+}
+
+.#{$ns}-method--twitter {
+  $color: #00ACED;
+  background-color: lighten($color, 45%);
+  color: $color;
+  
+  &:before {
+    content: '@';
+    color: lighten($color, 20%);
+  }
+  
+  &:hover {
+    background-color: lighten($color, 40%);
+  }
+}
+
+.#{$ns}-method--map {
+  $color: darken(#78c14d, 5%);
+  background-color: lighten($color, 38%);
+  color: $color;
+  
+  &:hover {
+    background-color: lighten($color, 32%);
+  }
+}

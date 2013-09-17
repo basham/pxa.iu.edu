@@ -1,50 +1,118 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>{% if page.title != site.ignore_page_title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="icon" href="/favicon.gif">
+    <link rel="shortcut icon" href="/favicon.gif">
 
-        <!-- build:css({app,.tmp}) /css/main.css -->
-        <!-- Syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
+    <!-- build:css({app,.tmp}) /css/main.css -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- endbuild -->
+    
+    <script>
+      function testmap() {
+        var obj = document.getElementsByTagName('object')[1];
+        var svg = obj.contentDocument.getElementsByTagName('svg')[0];
+        svg.setAttribute("viewBox", "500 325 950 550");
+        
+        //svg.setAttribute("viewBox", "500 325 1000 500");
+      }
+    </script>
+  </head>
+  
+  <body>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-        <!-- endbuild -->
+    <header class="Header">
 
-    </head>
-    <body>
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="60px" viewBox="0 0 50 60" style="enable-background:new 0 0 50 60;" xml:space="preserve">
+        <filter id="dropshadow" height="200%" width="200%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="0"/> 
+          <feOffset dx="0" dy="0.3" result="offsetblur"/> 
+          <feMerge> 
+            <feMergeNode/>
+            <feMergeNode in="SourceGraphic"/> 
+          </feMerge>
+        </filter>
+        <defs xmlns="http://www.w3.org/2000/svg">
+        <style>
+          polygon, polyline { shape-rendering: crispEdges; }
+        </style>
+      </defs>
+      <g>
+        <polygon filter="url(#dropshadow)" style="fill:#7D110C;" points="15,42 18,42 18,50 32,50 32,42 35,42 40,37 40,20 42,20 42,14 32,14 32,10 32,10 18,10 
+          18,14 8,14 8,20 10,20 10,37   "/>
+        <polyline filter="url(#dropshadow)" style="fill:#FFFFFF;" points="30,12 30,14 28,14 28,44 30,44 30,48 20,48 20,44 22,44 22,14 20,14 20,12 30,12   "/>
+        <polyline filter="url(#dropshadow)" style="fill:#FFFFFF;" points="40,16 40,18 38,18 38,36 34,40 29,40 29,34 32,34 32,18 30,18 30,16 40,16   "/>
+        <polyline filter="url(#dropshadow)" style="fill:#FFFFFF;" points="20,16 20,18 18,18 18,34 21,34 21,40 16,40 12,36 12,18 10,18 10,16 20,16   "/>
+      </g>
+      </svg>
+      
+      <!--
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="60px" viewBox="0 0 50 60" style="enable-background:new 0 0 50 60;" xml:space="preserve">
+      <g>
+        <polygon style="fill:#7D110C;" points="15,42 18,42 18,50 32,50 32,42 35,42 40,37 40,20 42,20 42,14 32,14 32,10 32,10 18,10 
+          18,14 8,14 8,20 10,20 10,37   "/>
+        <polyline style="fill:#FFFFFF;" points="30,12 30,14 28,14 28,44 30,44 30,48 20,48 20,44 22,44 22,14 20,14 20,12 30,12   "/>
+        <polyline style="fill:#FFFFFF;" points="40,16 40,18 38,18 38,36 34,40 29,40 29,34 32,34 32,18 30,18 30,16 40,16   "/>
+        <polyline style="fill:#FFFFFF;" points="20,16 20,18 18,18 18,34 21,34 21,40 16,40 12,36 12,18 10,18 10,16 20,16   "/>
+      </g>
+      </svg>
+-->
+      <hgroup>
+        <h1>Process Experience Architecture Group</h1>
+        <h2>
+          <a href="http://uits.iu.edu" title="University Information Technology Services">UITS</a>
+          &bull;
+          <a href="http://www.iu.edu">Indiana University</a>
+        </h2>
+      </hgroup>
+      
+      <nav class="Header-nav">
+        {% for p in site.pages %}
+          <a href="{{ p.url }}"{% if p.url == page.url %}class="is-active"{% endif %}>{{ p.title }}</a>
+        {% endfor %}
+      </nav>
 
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
+    </header>
 
-                {{ content }}
-
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Chris Basham<br />
-                  <a href="mailto:csbasham@indiana.edu">csbasham@indiana.edu</a>
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/basham/">github.com/basham</a><br />
-                  <a href="http://twitter.com/chrisbasham/">twitter.com/chrisbasham</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
-
+    <section{% if page.class %} class="{{ page.class }}"{% endif %}>
+      {{ content }}
+    </section>
+    
+    {% if false %}
+    <ul>
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <footer class="Footer">
+      <a href="http://www.iu.edu/" title="Indiana University">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="60px" viewBox="0 0 50 60" style="enable-background:new 0 0 50 60;" xml:space="preserve">
+        <g>
+          <polyline style="fill:#7D110C;" points="30,12 30,14 28,14 28,44 30,44 30,48 20,48 20,44 22,44 22,14 20,14 20,12 30,12   "/>
+          <polyline style="fill:#7D110C;" points="40,16 40,18 38,18 38,36 34,40 29,40 29,34 32,34 32,18 30,18 30,16 40,16   "/>
+          <polyline style="fill:#7D110C;" points="20,16 20,18 18,18 18,34 21,34 21,40 16,40 12,36 12,18 10,18 10,16 20,16   "/>
+        </g>
+        </svg>
+      </a>
+      <p><a href="http://www.iu.edu/comments/copyright.shtml">Copyright</a> &copy; {{ site.time | date: '%Y' }} The Trustees of <a href="http://www.iu.edu/">Indiana University</a> &bull; <a href="http://www.iu.edu/comments/complaint.shtml">Copyright Complaints</a></p>
+    </footer>
+    
     <!-- build:js(app) /js/scripts.js -->
     <script src="/js/main.js"></script>
     <!-- endbuild -->
-    </body>
+  </body>
 </html>

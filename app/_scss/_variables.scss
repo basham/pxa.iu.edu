@@ -1,0 +1,19 @@
+/*
+ * Block IU
+ */
+ 
+$scale: 3;
+$width: 50px;
+$height: 60px;
+$w: $width * $scale;
+$h: $height * $scale;
+
+/*
+ * Compass defaults
+ */
+ 
+$default-border-radius: 2px;
+$default-box-shadow-color: rgba(#000, 0.25);
+$default-text-shadow-color: #FFF;
+$default-text-shadow-v-offset: 1px;
+$default-transition-duration: 0.25s;

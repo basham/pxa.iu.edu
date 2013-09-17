@@ -1,0 +1,51 @@
+$base-font-size: 16px;
+
+$golden: 1.61803398875; // Golden ratio
+$scale: sqrt($golden);
+
+$s: $base-font-size / $scale; // Small
+$r: $s * $scale; // Regular
+$m: $r * $scale; // Medium
+$l: $m * $scale; // Large
+$xl: $l * $scale; // Extra Large
+$xxl: $xl * $scale; // Extra Extra Large
+
+
+/*
+ * Vertical rhythm
+ */
+
+$base-line-height: round($base-font-size * $golden);
+$grid-background-baseline-color: lighten(blue, 40%); 
+$grid-background-baseline-height: $base-line-height;
+
+$show-baseline-grid-backgrounds: false;
+
+@include establish-baseline;
+
+
+/*
+ * Horizontal rhythm
+ * http://www.pearsonified.com/2012/01/characters-per-line.php
+ * http://www.pearsonified.com/2011/12/golden-ratio-typography.php
+ * http://www.pearsonified.com/typography/
+ */
+
+$cpl: 75; // Characters per line
+$mu: 2.26; // Helvetica Neue character constant
+
+$line-width: $cpl * $base-font-size / $mu; // pixels
+$horizontal-lines: ceil($line-width / $base-line-height);
+$base-line-width: rhythm($horizontal-lines, $base-font-size);
+
+//
+// Google Fonts
+// http://www.google.com/fonts#UsePlace:use/Collection:Lato:400,700|Merriweather
+//
+%serif {
+  font-family: 'Merriweather', serif;
+}
+
+%sans-serif {
+  font-family: 'Lato', sans-serif;
+}

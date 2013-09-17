@@ -1,0 +1,8 @@
+a {
+  color: $crimson;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
