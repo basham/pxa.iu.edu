@@ -18,6 +18,7 @@
 //
 // Generic utilities
 //
+@import 'generic/breakpoint';
 @import 'generic/colors';
 @import 'generic/grid';
 @import 'generic/type';
@@ -38,6 +39,7 @@
 //
 // Components
 //
+@import 'core/block-iu';
 @import 'core/contact';
 @import 'core/footer';
 @import 'core/header';

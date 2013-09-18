@@ -1,0 +1,202 @@
+//
+// Example use
+//
+/* Manually Stacked Icon
+  <span class="BlockIU
+   BlockIU--stack
+   BlockIU--6x
+   BlockIU--whiteCrimson
+   BlockIU--shadow" aria-hidden="true">
+    <span class="BlockIU-icon BlockIU-icon--plate"></span>
+    <span class="BlockIU-icon BlockIU-icon--letters"></span>
+  </span>
+*/
+/* Stacked Icon
+  <span class="BlockIU
+   BlockIU--stackIcon
+   BlockIU--stackIcon--plate
+   BlockIU--6x
+   BlockIU--whiteCrimson
+   BlockIU--shadow" aria-hidden="true"></span>
+*/
+/* Icon in link
+  <a href="http://www.iu.edu/" title="Indiana University"
+    class="BlockIU-icon BlockIU-icon--2x Footer-blockIU">IU</a>
+*/
+
+$ns: 'BlockIU';
+
+$icon-size: 30px;
+
+//
+// Font created by http://icomoon.io
+//
+
+/* WARNING: You are using ligatures for your icon font.
+      Ligatures are not supported in IE 9 (and older).
+      Use the Private Use Area encoding for best browser support.
+==================================================================== */
+@font-face {
+  font-family: 'iu-icons';
+  src:url('fonts/iu-icons.eot');
+}
+@font-face {
+  font-family: 'iu-icons';
+  src: url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAAUYAA0AAAAABwgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAABMAAAAVAAAAGDppU1RUZGVE0AAAKAAAAAGgAAABxmSE/wR0RFRgAAApwAAAAkAAAALABHAApHUE9TAAACwAAAACAAAAAgbJF0j0dTVUIAAALgAAAAQQAAAFDZI9wmT1MvMgAAAyQAAABMAAAAYFYM4T9jbWFwAAADcAAAAFIAAAFi4GjzV2hlYWQAAAPEAAAAMAAAADb/niS7aGhlYQAAA/QAAAAeAAAAJAeY/8dobXR4AAAEFAAAABcAAAAaDSABsG1heHAAAAQsAAAABgAAAAYAB1AAbmFtZQAABDQAAADXAAABjDGME4Bwb3N0AAAFDAAAAAwAAAAgAAMAAHicPY49SwNBEIZnk/uI8ThjuBOFww9Io0E4zWFzIEhQkG3XKoWFhYSFWHipbANGp7FIJ3bpLmU6f8JZCKbLT0gr7OVW1I3BDAzz8M7LO0NA04AQstRs7zevblq3QHJA4DjdyqXb+XRdQyuPlrZZhNLJ9Q/iAiwTacYyR/fgacUDKHnwsupBwSN3ZTBmGQVYhjJswA7stlvNM9/3zy8vFJ36/sF8HP4fXRwHIPekSx7II+zBEZiEaDZ7fnsfZczGzNG+WcZMW4ymjisDHsuhkdAx4qSBKHox6qIie+6r6PFYBJyrNaUh6rKSMncmfEUxlUESpxE37LQzrSiVcjkw6vUaIo8Rq5KpOAVxDesfKAYcMREB6olgpgzkpysiLiNTsLU52KIjIjcco+gr60RZlT9CVXTGVSXKfhg21BeOjIRj2ojaX0+HDrpoFX8BP4OYRXicY2BgYGQAgpOd+YYg+lx8QTyMBgBAKwXsAAB4nGNgZGBg4ANiFQYQYGJgZmAEQyYwZGZgA7JZwDIMAAkvAFIAAQAAAAoAHAAeAAFsYXRuAAgABAAAAAD//wAAAAAAAHicY2BkYGDgYpBj0GFgzEksyWPgYGABijD8/88AkmHMyUxPBIoxQHhAORYwzQHEQlCahYEJCNmALEYGVgBL2AX8AAAAeJxjYGZWYJzAwMrAwVTAtICBgaENQjOeYdBn+MHAwMTAyswAA4wCDAgQkOaawuDA4PmBgbnh/wGGMOYGBocGoBq4AgUgZAIAYwMMeHicY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQzMHgyhD5g+sDw/z9YHYjHCOH93/N/owKTACPUBDhgZGNAFyIfsCKx2ahlKO0BAJt1DYsAAHicY2BkYGAAYh19fpl4fpuvDNzMB4AiDOfiC+IR9P8DzAeYG4BcDgYmkCgAAokJ/XicY2BkYGBu+H+AIYz5AAPDHwcgCRRBAWwAiWQFYwAAeJxjPsAABswKDAuAeAIQN0BEACuWAt0AAABQAAAHAAB4nH2OPY7CMBBGXyBB/GyxoqChcYFElSgODXAAxAm4AIqQm1gKIG5CxRloOQYH4Ax7hx2HQUIUWBr5+fmzZ4AfzkSEFdFlqNwiYarcZsJJOZbMVTlhwF25I/5PklHcE/PbvArcos9Yuc2aVDmWzEU5YcRNuSP+geMoSccWT8Ue3DF1W18FepNPs2rOh2av2VFiKMjIZV9KfX72tJa52IVUIUnLTD7y1WHl611piiw3S/NqKmjn6SItcjvj22wb6V2Lcs1V6BGmYFPWe+crY7P82/N/3rI6JwB4nGNgZsALAAB9AAQ=) format('woff'),
+     url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]::before {
+  font-family: 'iu-icons';
+  content: attr(data-icon);
+    speak: none;
+  /* Enable Ligatures */
+  -webkit-font-feature-settings:"liga","dlig";-moz-font-feature-settings:"liga=1, dlig=1";-moz-font-feature-settings:"liga","dlig";-ms-font-feature-settings:"liga","dlig";-o-font-feature-settings:"liga","dlig";
+  font-feature-settings:"liga","dlig";
+  text-rendering: optimizeLegibility;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.#{$ns} {
+}
+
+.#{$ns}--stack {
+  position: relative;
+
+  .#{$ns}-icon {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.#{$ns}--stackIcon {
+  position: relative;
+
+  &::before, &::after {
+    @extend .#{$ns}-icon;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &::after {
+    content: "\49\55";
+  }
+}
+
+.#{$ns}--stackIcon--rim {
+
+  &::before {
+    content: "\e001";
+  }
+}
+
+.#{$ns}--stackIcon--plate {
+
+  &::before {
+    content: "\e002";
+  }
+}
+
+.#{$ns}--crimsonWhite {
+
+  &::after, .#{$ns}-icon--letters {
+    color: $crimson;
+  }
+
+  &::before, .#{$ns}-icon--rim, .#{$ns}-icon--plate {
+    color: #fff;
+  }
+}
+
+.#{$ns}--whiteCrimson {
+
+  &::after, .#{$ns}-icon--letters {
+    color: #fff;
+  }
+
+  &::before, .#{$ns}-icon--rim, .#{$ns}-icon--plate {
+    color: $crimson;
+  }
+}
+
+.#{$ns}--blackWhite {
+
+  &::after, .#{$ns}-icon--letters {
+    color: #000;
+  }
+
+  &::before, .#{$ns}-icon--rim, .#{$ns}-icon--plate {
+    color: #fff;
+  }
+}
+
+.#{$ns}--whiteBlack {
+
+  &::after, .#{$ns}-icon--letters {
+    color: #fff;
+  }
+
+  &::before, .#{$ns}-icon--rim, .#{$ns}-icon--plate {
+    color: #000;
+  }
+}
+
+.#{$ns}--shadow, .#{$ns}-icon--shadow {
+  text-shadow: 0 1px #000;
+}
+
+.#{$ns}-icon {
+  font-family: 'iu-icons';
+  speak: none;
+  /* Enable Ligatures */
+  -webkit-font-feature-settings:"liga","dlig";-moz-font-feature-settings:"liga=1, dlig=1";-moz-font-feature-settings:"liga","dlig";-ms-font-feature-settings:"liga","dlig";-o-font-feature-settings:"liga","dlig";
+  font-feature-settings: "liga","dlig";
+  text-rendering: optimizeLegibility;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+@for $i from 1 through 6 {
+  .#{$ns}--#{$i}x, .#{$ns}-icon--#{$i}x {
+    font-size: $icon-size * $i;
+  }
+}
+
+.#{$ns}-icon--crimson {
+  color: $crimson;
+}
+
+.#{$ns}-icon--letters {
+
+  &::before {
+    content: "\49\55";
+  }
+}
+
+.#{$ns}-icon--rim {
+
+  &::before {
+    content: "\e001";
+  }
+}
+
+.#{$ns}-icon--plate {
+
+  &::before {
+    content: "\e002";
+  }
+}

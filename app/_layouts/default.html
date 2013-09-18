@@ -35,48 +35,16 @@
 
     <header class="Header">
 
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="60px" viewBox="0 0 50 60" style="enable-background:new 0 0 50 60;" xml:space="preserve">
-        <filter id="dropshadow" height="200%" width="200%">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="0"/> 
-          <feOffset dx="0" dy="0.3" result="offsetblur"/> 
-          <feMerge> 
-            <feMergeNode/>
-            <feMergeNode in="SourceGraphic"/> 
-          </feMerge>
-        </filter>
-        <defs xmlns="http://www.w3.org/2000/svg">
-        <style>
-          polygon, polyline { shape-rendering: crispEdges; }
-        </style>
-      </defs>
-      <g>
-        <polygon filter="url(#dropshadow)" style="fill:#7D110C;" points="15,42 18,42 18,50 32,50 32,42 35,42 40,37 40,20 42,20 42,14 32,14 32,10 32,10 18,10 
-          18,14 8,14 8,20 10,20 10,37   "/>
-        <polyline filter="url(#dropshadow)" style="fill:#FFFFFF;" points="30,12 30,14 28,14 28,44 30,44 30,48 20,48 20,44 22,44 22,14 20,14 20,12 30,12   "/>
-        <polyline filter="url(#dropshadow)" style="fill:#FFFFFF;" points="40,16 40,18 38,18 38,36 34,40 29,40 29,34 32,34 32,18 30,18 30,16 40,16   "/>
-        <polyline filter="url(#dropshadow)" style="fill:#FFFFFF;" points="20,16 20,18 18,18 18,34 21,34 21,40 16,40 12,36 12,18 10,18 10,16 20,16   "/>
-      </g>
-      </svg>
-      
-      <!--
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="60px" viewBox="0 0 50 60" style="enable-background:new 0 0 50 60;" xml:space="preserve">
-      <g>
-        <polygon style="fill:#7D110C;" points="15,42 18,42 18,50 32,50 32,42 35,42 40,37 40,20 42,20 42,14 32,14 32,10 32,10 18,10 
-          18,14 8,14 8,20 10,20 10,37   "/>
-        <polyline style="fill:#FFFFFF;" points="30,12 30,14 28,14 28,44 30,44 30,48 20,48 20,44 22,44 22,14 20,14 20,12 30,12   "/>
-        <polyline style="fill:#FFFFFF;" points="40,16 40,18 38,18 38,36 34,40 29,40 29,34 32,34 32,18 30,18 30,16 40,16   "/>
-        <polyline style="fill:#FFFFFF;" points="20,16 20,18 18,18 18,34 21,34 21,40 16,40 12,36 12,18 10,18 10,16 20,16   "/>
-      </g>
-      </svg>
--->
-      <hgroup>
-        <h1>Process Experience Architecture Group</h1>
-        <h2>
+      <span href="/" class="Header-blockIU BlockIU BlockIU--stackIcon BlockIU--stackIcon--plate BlockIU--whiteCrimson BlockIU--shadow" aria-hidden="true"></span>
+
+      <div class="Header-brand">
+        <h1><a href="/">Process Experience Architecture Group</a></h1>
+        <p>
           <a href="http://uits.iu.edu" title="University Information Technology Services">UITS</a>
           &bull;
           <a href="http://www.iu.edu">Indiana University</a>
-        </h2>
-      </hgroup>
+        </p>
+      </div>
       
       <nav class="Header-nav">
         {% for p in site.pages %}
@@ -90,25 +58,12 @@
       {{ content }}
     </section>
     
-    {% if false %}
-    <ul>
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-    {% endif %}
-    
     <footer class="Footer">
-      <a href="http://www.iu.edu/" title="Indiana University">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="60px" viewBox="0 0 50 60" style="enable-background:new 0 0 50 60;" xml:space="preserve">
-        <g>
-          <polyline style="fill:#7D110C;" points="30,12 30,14 28,14 28,44 30,44 30,48 20,48 20,44 22,44 22,14 20,14 20,12 30,12   "/>
-          <polyline style="fill:#7D110C;" points="40,16 40,18 38,18 38,36 34,40 29,40 29,34 32,34 32,18 30,18 30,16 40,16   "/>
-          <polyline style="fill:#7D110C;" points="20,16 20,18 18,18 18,34 21,34 21,40 16,40 12,36 12,18 10,18 10,16 20,16   "/>
-        </g>
-        </svg>
-      </a>
-      <p><a href="http://www.iu.edu/comments/copyright.shtml">Copyright</a> &copy; {{ site.time | date: '%Y' }} The Trustees of <a href="http://www.iu.edu/">Indiana University</a> &bull; <a href="http://www.iu.edu/comments/complaint.shtml">Copyright Complaints</a></p>
+
+      <a href="http://www.iu.edu/" title="Indiana University" class="BlockIU-icon BlockIU-icon--2x Footer-blockIU">IU</a>
+
+      <span class="Footer-copyright"><a href="http://www.iu.edu/comments/copyright.shtml">Copyright</a> &copy; {{ site.time | date: '%Y' }} The Trustees of <a href="http://www.iu.edu/">Indiana University</a> &bull; <a href="http://www.iu.edu/comments/complaint.shtml">Copyright Complaints</a></span>
+
     </footer>
     
     <!-- build:js(app) /js/scripts.js -->

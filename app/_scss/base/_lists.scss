@@ -3,5 +3,9 @@ ul {
 }
 
 li {
-  margin: 0 0 0 rhythm(1, $r);
+  margin: 0;
+
+  @include breakpoint-at(43em) {
+    margin: 0 0 0 rhythm(1, $r);
+  }
 }

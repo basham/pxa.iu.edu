@@ -2,22 +2,41 @@ $ns: 'Footer';
 
 .#{$ns} {
   border-top: 1px solid $border-color;
-  margin-top: rhythm(2, $r);
+  margin-top: rhythm(1, $r);
+  padding: rhythm(0.5, $r) 0;
   position: relative;
-  
-  > a {
-    display: block;
-    left: $w - $width;
-    position: absolute;
+  text-align: center;
+
+  @include breakpoint-at(43em) {
+    margin-top: rhythm(2, $r);
+    padding-left: $w - $width;
+    text-align: left;
   }
-  
-  svg {
-    display: block;
+
+  > * {
+    vertical-align: middle;
   }
+
+  a {
+    white-space: nowrap;
+  }
+}
+
+.#{$ns}-blockIU {
+  color: $crimson;
   
-  p {
-    @include adjust-font-size-to($s);
-    line-height: $height;
-    margin-left: $w;
+  &:hover {
+    background-color: $crimson;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.#{$ns}-copyright {
+  @include adjust-font-size-to($s);
+  display: block;
+
+  @include breakpoint-at(36em) {
+    display: inline;
   }
 }

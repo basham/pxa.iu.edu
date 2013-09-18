@@ -6,3 +6,15 @@ a {
     text-decoration: underline;
   }
 }
+
+section a {
+  text-decoration: underline;
+
+  &:visited {
+    color: tint($crimson, 30%);
+  }
+
+  &:hover {
+    color: inherit;
+  }
+}

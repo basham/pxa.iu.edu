@@ -16,6 +16,11 @@ permalink: resources/
 
 - [HTML5 Doctor](http://html5doctor.com)
 
+### Typography
+
+- [Butterick's Practical Typography](http://practicaltypography.com)
+- [The Elements of Typographic Style Applied to the Web](http://webtypography.net)
+
 ## Tools
 
 - [Anvil](http://anvilformac.com) for local website management
@@ -23,10 +28,11 @@ permalink: resources/
 - [Sublime Text](http://www.sublimetext.com) for text editing
 - [CodeKit](http://incident57.com/codekit/) for live preprocessing
 - [iA Writer](http://www.iawriter.com) for focused writing
-- [SASS](http://sass-lang.com) for CSS scripting
+- [Sass](http://sass-lang.com) for CSS scripting
 - [OmniGraffle](http://www.omnigroup.com/products/omnigraffle/) for wireframing
 - [Morae](http://www.techsmith.com/morae.html) for usability test recording and analysis
 - [Balsamiq Mockups](http://www.balsamiq.com/) for wireframing
+- [Yeoman](http://yeoman.io) for automating front-end development
 
 ## User Experience
 

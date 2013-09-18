@@ -1,6 +1,6 @@
 html {
   @extend %serif;
-  //@include baseline-grid-background;
+  @include baseline-grid-background;
   color: #222;
 }
 

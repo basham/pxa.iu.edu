@@ -1,0 +1,19 @@
+//
+// Breakpoint mixin inspired by
+// http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+//
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 64.375em) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 50em) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 37.5em)  { @content; }
+  }
+}
+
+@mixin breakpoint-at($point) {
+  @media (min-width: $point) { @content; }
+}

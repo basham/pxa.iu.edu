@@ -1,24 +1,41 @@
 $ns: 'Contact';
 
+.#{$ns} {
+}
+
 .#{$ns}-method {
   @include border-radius;
   @include text-shadow;
-  display: inline-block;
+  display: block;
+  text-align: center;
   line-height: 2;
   padding: 0 rhythm(0.5, $r);
+  text-decoration: none;
+
+  @include breakpoint-at(33em) {
+    display: inline-block;
+
+    & + .#{$ns}-method {
+      margin-left: 0.5em;
+      margin-top: 0;
+    }
+  }
 
   &:hover {
     text-decoration: none;
   }
 
   & + .#{$ns}-method {
-    margin-left: 0.5em;
+    margin-top: 0.5em;
   }
 }
 
 .#{$ns}-method--email {
-  background-color: $cream;
-  color: darken($cream, 50%);
+
+  &:link, &:visited {
+    background-color: $cream;
+    color: darken($cream, 50%);
+}
   
   &:hover {
     background-color: darken($cream, 5%);
@@ -26,8 +43,11 @@ $ns: 'Contact';
 }
 
 .#{$ns}-method--tel {
-  background-color: lighten($violet, 40%);
-  color: $violet;
+
+  &:link, &:visited {
+    background-color: lighten($violet, 40%);
+    color: $violet;
+  }
   
   &:hover {
     background-color: lighten($violet, 35%);
@@ -36,8 +56,11 @@ $ns: 'Contact';
 
 .#{$ns}-method--twitter {
   $color: #00ACED;
-  background-color: lighten($color, 45%);
-  color: $color;
+
+  &:link, &:visited {
+    background-color: lighten($color, 45%);
+    color: $color;
+  }
   
   &:before {
     content: '@';
@@ -51,9 +74,12 @@ $ns: 'Contact';
 
 .#{$ns}-method--map {
   $color: darken(#78c14d, 5%);
-  background-color: lighten($color, 38%);
-  color: $color;
   
+  &:link, &:visited {
+    background-color: lighten($color, 38%);
+    color: $color;
+  }
+
   &:hover {
     background-color: lighten($color, 32%);
   }

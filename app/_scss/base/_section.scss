@@ -1,16 +1,16 @@
 section {
-  margin-left: $w;
-  width: $base-line-width;
+  padding: 0 1em;
+
+  @include breakpoint-at(43em) {
+    margin-left: $w;
+    max-width: $base-line-width;
+    padding: 0;
+  }
 
   > object {
     margin: rhythm(2, $r) 0 0 0;
     max-height: 600px;
     width: 100%;
-  }
-
-  :not(h1) + h2 {
-    border-top: 1px solid $border-color;
-    padding-top: rhythm(2, $l);
   }
   
   figure {
