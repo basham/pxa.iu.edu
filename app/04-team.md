@@ -15,7 +15,7 @@ Tara is the manager of the Process Experience Architecture group at Indiana Univ
 <a href="https://twitter.com/taranoba" title="Follow Tara on Twitter" class="Contact-method Contact-method--twitter">taranoba</a>
 
 ## Jae Kim <span class="subtitle">Lead User Experience Analyst</span>
-Jae is the Lead UX Analyst for the User Experience Group and has completed his Post-Master's degree in Information Science in the School of Library and Information Science at Indiana University. In addition to his focus on Human Computer Interaction, he is interested in effective Computer-Mediated Communication (CMC) systems that accommodate and promote social interaction and relationship building.
+Jae is a UX Analyst with a Post-Master's degree in Information Science. Since joining the team in 2005, he has seen time and again the unique and critical value of user feedback &mdash; and looks for every opportunity to involve them in the design process.
 
 <a href="mailto:jahkim@iu.edu" class="Contact-method Contact-method--email">jahkim@iu.edu</a>
 <a href="tel:+18128562280" class="Contact-method Contact-method--tel tel">(812) 856-2280</a>
@@ -50,6 +50,7 @@ Kevin is a Systems Analyst Programmer for Kuali Student, a community source proj
 Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla.
 
 <a href="mailto:jmforney@indiana.edu" class="Contact-method Contact-method--email">jmforney@indiana.edu</a>
+<a href="https://twitter.com/jaredforney" title="Follow Jared on Twitter" class="Contact-method Contact-method--twitter">jaredforney</a>
 
 ## Chad Nobbe <span class="subtitle">Undergraduate Intern</span>
 Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
