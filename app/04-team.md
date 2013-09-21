@@ -47,7 +47,7 @@ Kevin is a Systems Analyst Programmer for Kuali Student, a community source proj
 <a href="https://twitter.com/kmakice" title="Follow Kevin on Twitter" class="Contact-method Contact-method--twitter">kmakice</a>
 
 ## Jared Forney <span class="subtitle">Graduate Assistant</span>
-Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla.
+Jared is a graduate assistant currently pursuing a Master's degree in Human-Computer Interaction Design. He has a passion for strategic design planning and believes that good design is a conversation between users, designers, and the ecosystem in which they all live. 
 
 <a href="mailto:jmforney@indiana.edu" class="Contact-method Contact-method--email">jmforney@indiana.edu</a>
 <a href="https://twitter.com/jaredforney" title="Follow Jared on Twitter" class="Contact-method Contact-method--twitter">jaredforney</a>
