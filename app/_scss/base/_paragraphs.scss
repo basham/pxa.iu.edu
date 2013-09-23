@@ -2,11 +2,4 @@ p {
   @include adjust-font-size-to($r);
   @include rhythm(0, 0, 0, 0.5, $r);
   color: #444;
-
-  &.lead {
-    //@extend %sans-serif;
-    @include adjust-font-size-to($m, 1.25);
-    @include leader(2, $m);
-    color: inherit;
-  }
 }

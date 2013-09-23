@@ -3,6 +3,14 @@ $ns: 'Contact';
 .#{$ns} {
 }
 
+.#{$ns}-address {
+  font-style: normal;
+}
+
+.#{$ns}-addressName {
+  font-weight: bold;
+}
+
 .#{$ns}-method {
   @include border-radius;
   @include text-shadow;

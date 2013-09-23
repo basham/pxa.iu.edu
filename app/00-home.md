@@ -4,7 +4,7 @@ title: Home
 permalink: /
 ---
 
-<p class="lead">The Process Experience Architecture (PXA) group designs web software for Indiana University.</p>
+<h1 class="Headings-lead">The Process Experience Architecture (PXA) group designs web software for Indiana University.</h1>
 
 A team within University Information Technology Services (UITS), PXA designs student information systems and helps IT managers improve the user experience of their systems and websites.
 

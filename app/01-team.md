@@ -35,7 +35,7 @@ Chris is an interaction designer with a Master's degree in Human-Computer Intera
 <a href="https://twitter.com/chrisbasham" title="Follow Chris on Twitter" class="Contact-method Contact-method--twitter">chrisbasham</a>
 
 ## Kai Wang <span class="subtitle">Interaction Designer</span>
-Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Kai is an interaction designer for the Process eXperience Architecture group. He has a Master's degree in Interaction Design. His design process involves solving problems by utilizing ideation, brainstorming, researching, prototyping, wireframing, and reiterating. Kai's goal is to create designs that are well-informed by the users' needs.
 
 <a href="mailto:kaiwang@iu.edu" class="Contact-method Contact-method--email">kaiwang@iu.edu</a>
 <a href="tel:+18128561049" class="Contact-method Contact-method--tel tel">(812) 856-1049</a>

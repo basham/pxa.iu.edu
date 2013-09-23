@@ -35,6 +35,12 @@ h3 {
   }
 }
 
+.Headings-lead {
+  @extend %serif;
+  @include adjust-font-size-to($m, 1.25);
+  @include rhythm(1, 0, 0, 0.5, $m);
+}
+
 @include breakpoint-at(43em) {
 
   h1 {
@@ -43,5 +49,9 @@ h3 {
 
   h2 {
     @include leader(1, $l);
+  }
+
+  .Headings-lead {
+    @include leader(2, $m);
   }
 }

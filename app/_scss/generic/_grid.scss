@@ -13,11 +13,12 @@
 }
 
 %grid-item {
-  @include inline-block;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
+  display: block;
   padding-left: 0;                 /* [2] */
   vertical-align: top;             /* [3] */
   letter-spacing: normal;          /* [4] */
+  vertical-align: middle;
   word-spacing: normal;            /* [4] */
 }
 
@@ -38,10 +39,11 @@
   word-spacing: -0.43em;
   
   > * {
-    @include inline-block;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
+    display: inline-block;
     vertical-align: top;
     letter-spacing: normal;
+    vertical-align: middle;
     word-spacing: normal;
   }
 }
