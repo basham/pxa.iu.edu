@@ -1,4 +1,6 @@
-section {
+$ns: 'Main';
+
+.#{$ns} {
   padding: 0 1em;
 
   @include breakpoint-at(43em) {

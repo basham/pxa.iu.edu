@@ -36,17 +36,20 @@
         </p>
       </div>
       
-      <nav class="Header-nav">
+      <nav class="Nav">
+        <h1 class="Nav-heading">Navigation</h1>
+        <div class="Nav-links">
         {% for p in site.pages %}
           <a href="{{ p.url }}"{% if p.url == page.url %}class="is-active"{% endif %}>{{ p.title }}</a>
         {% endfor %}
+      </div>
       </nav>
 
     </header>
 
-    <section{% if page.class %} class="{{ page.class }}"{% endif %}>
+    <main class="Main{% if page.class %} {{ page.class }}{% endif %}">
       {{ content }}
-    </section>
+    </main>
     
     <footer class="Footer">
 
