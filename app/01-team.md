@@ -35,10 +35,11 @@ Chris is an interaction designer with a Master's degree in Human-Computer Intera
 <a href="https://twitter.com/chrisbasham" title="Follow Chris on Twitter" class="Contact-method Contact-method--twitter">chrisbasham</a>
 
 ## Kai Wang <span class="subtitle">Interaction Designer</span>
-Kai is an interaction designer for the Process eXperience Architecture group. He has a Master's degree in Interaction Design. His design process involves solving problems by utilizing ideation, brainstorming, researching, prototyping, wireframing, and reiterating. Kai's goal is to create designs that are well-informed by the users' needs.
+Kai is an interaction designer with a Master's degree in Human-Computer Interaction Design, focusing on creating frustration-free experiences across various platforms. Kai is intrigued by the effects of unique designs to the behavior of our everyday life and tries to captures them through photography whenever possible.
 
 <a href="mailto:kaiwang@iu.edu" class="Contact-method Contact-method--email">kaiwang@iu.edu</a>
 <a href="tel:+18128561049" class="Contact-method Contact-method--tel tel">(812) 856-1049</a>
+<a href="https://twitter.com/mrwangkai" title="Follow Kai on Twitter" class="Contact-method Contact-method--twitter">mrwangkai</a>
 
 ## Kevin Makice <span class="subtitle">Systems Analyst Programmer</span>
 Kevin is a Systems Analyst Programmer for Kuali Student, a community source project for higher education institutions. In 2006, he graduated with a Master's degree in human-computer interaction from Indiana University and is currently a Ph.D. candidate at the School of Informatics and Computing. His past research is eclectic, including political wikis, tangible interfaces for children's games, machinima, and network analysis of ball movement in basketball. In 2009, Kevin authored the first technical book about Twitter, Twitter API: Up and Running, published by O'Reilly Media. Kevin is also a contributor to Wired's GeekDad blog and a co-founder of SociaLens, a research and consulting firm helping organizations to succeed in the digital age.
