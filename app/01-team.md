@@ -8,7 +8,7 @@ class: Contact
 # Team
 
 ## Tara Bazler <span class="subtitle">Manager</span>
-Tara is the manager of the Process Experience Architecture group at Indiana University. She has a Master’s degree in Human Computer Interaction through the School of Informatics and Computing and over 10 years of Experience in the field of Human Computer Interaction. She enjoys the challenges involved in creating quality systems while balancing user needs, system requirements, and development deadlines and restrictions. Tara's goal is to provide users with better information systems by promoting development processes that include user-centered design, user feedback at all stages of the development lifecycle, usability testing, and research.
+Tara is a user experience architect, managing a team of designers and directing design vision for a number of web products. She runs leafy trails, kayaks great lakes, chats in spoonerisms, and is a connoisseur of brunch.
 
 <a href="mailto:tbazler@iu.edu" class="Contact-method Contact-method--email">tbazler@iu.edu</a>
 <a href="tel:+18128561120" class="Contact-method Contact-method--tel tel">(812) 856-1120</a>
@@ -33,12 +33,6 @@ Kai is an interaction designer with a Master's degree in Human-Computer Interact
 <a href="mailto:kaiwang@iu.edu" class="Contact-method Contact-method--email">kaiwang@iu.edu</a>
 <a href="tel:+18128561049" class="Contact-method Contact-method--tel tel">(812) 856-1049</a>
 <a href="https://twitter.com/mrwangkai" title="Follow Kai on Twitter" class="Contact-method Contact-method--twitter">mrwangkai</a>
-
-## Jared Forney <span class="subtitle">Graduate Assistant</span>
-Jared is a graduate assistant currently pursuing a Master's degree in Human-Computer Interaction Design. He has a passion for strategic design planning and believes that good design is a conversation between users, designers, and the ecosystem in which they all live. 
-
-<a href="mailto:jmforney@indiana.edu" class="Contact-method Contact-method--email">jmforney@indiana.edu</a>
-<a href="https://twitter.com/jaredforney" title="Follow Jared on Twitter" class="Contact-method Contact-method--twitter">jaredforney</a>
 
 ## Chad Nobbe <span class="subtitle">Undergraduate Intern</span>
 Chad is working towards a B.S. in Informatics, a minor in Computer Science, and a minor in Information Technology. He is exploring the realms of UX design, programming, and data mining.
